@@ -23,10 +23,10 @@
 
 <div class="container mt-5 container-align">
     <div class="form-section col-md-6">
-        <h1 class="text-center">Loan Defaulter Prediction</h1>
+        <h2 class="text-center">Loan Defaulter Prediction</h2>
 
     <form action="/predict" method="POST">
-        <div class="row mb-3">
+        <div class="row mb-1">
             <div class="col-md-4">
                 <label for="loan" class="form-label">Loan Amount:</label>
             </div>
@@ -35,7 +35,7 @@
             </div>
         </div>
 
-        <div class="row mb-3">
+        <div class="row mb-1">
             <div class="col-md-4">
                 <label for="mortdue" class="form-label">Mortgage Due:</label>
             </div>
@@ -44,7 +44,7 @@
             </div>
         </div>
 
-        <div class="row mb-3">
+        <div class="row mb-1">
             <div class="col-md-4">
                 <label for="value" class="form-label">Value:</label>
             </div>
@@ -53,7 +53,7 @@
             </div>
         </div>
 
-        <div class="row mb-3">
+        <div class="row mb-1">
             <div class="col-md-4">
                 <label for="reason" class="form-label">Reason:</label>
             </div>
@@ -66,7 +66,7 @@
             </div>
         </div>
 
-        <div class="row mb-3">
+        <div class="row mb-1">
             <div class="col-md-4">
                 <label for="job" class="form-label">Job:</label>
             </div>
@@ -79,7 +79,7 @@
             </div>
         </div>
 
-        <div class="row mb-3">
+        <div class="row mb-1">
             <div class="col-md-4">
                 <label for="yoj" class="form-label">Years of Job:</label>
             </div>
@@ -88,7 +88,7 @@
             </div>
         </div>
 
-        <div class="row mb-3">
+        <div class="row mb-1">
             <div class="col-md-4">
                 <label for="derog" class="form-label">Derogatory Events:</label>
             </div>
@@ -97,7 +97,7 @@
             </div>
         </div>
 
-        <div class="row mb-3">
+        <div class="row mb-1">
             <div class="col-md-4">
                 <label for="delinq" class="form-label">Delinquencies:</label>
             </div>
@@ -106,7 +106,7 @@
             </div>
         </div>
 
-        <div class="row mb-3">
+        <div class="row mb-1">
             <div class="col-md-4">
                 <label for="clage" class="form-label">Current Credit Balance:</label>
             </div>
@@ -115,7 +115,7 @@
             </div>
         </div>
 
-        <div class="row mb-3">
+        <div class="row mb-1">
             <div class="col-md-4">
                 <label for="ninq" class="form-label">Number of Inquiries:</label>
             </div>
@@ -124,7 +124,7 @@
             </div>
         </div>
 
-        <div class="row mb-3">
+        <div class="row mb-1">
             <div class="col-md-4">
                 <label for="clno" class="form-label">Number of Credit Lines:</label>
             </div>
@@ -133,7 +133,7 @@
             </div>
         </div>
 
-        <div class="row mb-3">
+        <div class="row mb-1">
             <div class="col-md-4">
                 <label for="debtinc" class="form-label">Debt-to-Income Ratio:</label>
             </div>
@@ -172,83 +172,102 @@
         </div>
 
         <div class="mb-3">
-            <h4>Confusion Matrix</h4>
-            <div class="container mt-3">
-                <table class="table table-bordered table-striped">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th></th>
-                            <th>Predicted(D)</th>
-                            <th>Predicted(ND)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>Actual(D)</th>
-                            <td style="background-color: #90EE90;">892 (TP)</td>
-                            <td style="background-color: hsl(2, 57%, 75%);">35 (FN)</td>
-                        </tr>
-                        <tr>
-                            <th>Actual(ND)</th>
-                            <td style="background-color: hsl(3, 60%, 76%);">85 (FP)</td>
-                            <td style="background-color: #90EE90;">180 (TN)</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div>
-                <li>True Positive (TP): It is the total counts having both predicted and actual values are Defaulter.</li>
-                <li> True Negative (TN): It is the total counts having both predicted and actual values are Not Defaulter.</li>
-                <li> False Positive (FP): It is the total counts having prediction is Defaulter while actually Not Defaulter.</li>
-                <li> False Negative (FN): It is the total counts having prediction is Not Defaulter while actually, it is Defaulter.</li>
+            <ul class="nav nav-tabs" id="metricsTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="confusion-matrix-tab" data-toggle="tab" href="#confusion-matrix" role="tab" aria-controls="confusion-matrix" aria-selected="true">Confusion Matrix</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="classification-report-tab" data-toggle="tab" href="#classification-report" role="tab" aria-controls="classification-report" aria-selected="false">Classification Report</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="metricsTabContent">
+                <div class="tab-pane fade show active" id="confusion-matrix" role="tabpanel" aria-labelledby="confusion-matrix-tab">
+                    <h4>Confusion Matrix</h4>
+                    <div class="container mt-3" style="padding-left: 0; padding-right: 0;">
+                        <table class="table table-bordered table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+               </tr>                     <th></th>
+                                    <th>Predicted(D)</th>
+                                    <th>Predicted(ND)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+               </tr>                     <th>Actual(D)</th>
+                                    <td style="background-color: #90EE90;">892 (TP)</td>
+                                    <td style="background-color: hsl(2, 57%, 75%);">35 (FN)</td>
+                                </tr>
+                                <tr>
+                                </tr>    <th>Actual(ND)</th>
+                                    <td style="background-color: hsl(3, 60%, 76%);">85 (FP)</td>
+                                    <td style="background-color: #90EE90;">180 (TN)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mt-4"></div>
+                    <ul class="list-group">
+                        <li class="list-group-item" style="padding: 0.5rem 0.5rem;">
+                            <strong>True Positive (TP):</strong> The total count where both predicted and actual values are <span class="text-success">Defaulter</span>.
+                        </li>
+                        <li class="list-group-item" style="padding: 0.5rem 0.5rem;">
+                            <strong>True Negative (TN):</strong> The total count where both predicted and actual values are <span class="text-primary">Not Defaulter</span>.
+                        </li>
+                        <li class="list-group-item" style="padding: 0.5rem 0.5rem;">
+                            <strong>False Positive (FP):</strong> The total count where the prediction is <span class="text-success">Defaulter</span> but the actual value is <span class="text-primary">Not Defaulter</span>.
+                        </li>
+                        <li class="list-group-item" style="padding: 0.5rem 0.5rem;">
+                            <strong>False Negative (FN):</strong> The total count where the prediction is <span class="text-primary">Not Defaulter</span> but the actual value is <span class="text-success">Defaulter</span>.
+                        </li>
+                    </ul>
                 </div>
-        </div>
-
-        <div class="mb-3">
-            <h4>Classification Report</h4>
-            <div class="container mt-5">
-                <!-- Table to display classification report -->
-                <table class="table table-bordered table-striped">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th>Metric</th>
-                            <th>Precision</th>
-                            <th>Recall</th>
-                            <th>F1-Score</th>
-                            <th>Support</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>Defaulter (D)</th>
-                            <td>91.31%</td>
-                            <td>96.22%</td>
-                            <td>93.70%</td>
-                            <td>927</td>
-                        </tr>
-                        <tr>
-                            <th>Not Defaulter (ND)</th>
-                            <td>83.93%</td>
-                            <td>67.94%</td>
-                            <td>75.08%</td>
-                            <td>265</td>
-                        </tr>
-                        <tr>
-                            <th>Macro Average</th>
-                            <td>87.62%</td>
-                            <td>82.08%</td>
-                            <td>84.39%</td>
-                            <td>1192</td>
-                        </tr>
-                        <tr>
-                            <th>Weighted Average</th>
-                            <td>88.99%</td>
-                            <td>89.94%</td>
-                            <td>89.56%</td>
-                            <td>1192</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="tab-pane fade" id="classification-report" role="tabpanel" aria-labelledby="classification-report-tab">
+                    <h4>Classification Report</h4>
+                    <div class="container mt-5" style="padding-left: 0; padding-right: 0;">
+                        <table class="table table-bordered table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Metric</th>
+                                    <th>Precision</th>
+                                    <th>Recall</th>
+                                    <th>F1-Score</th>
+                                    <th>Support</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Defaulter (D)</th>
+                                    <td>91.31%</td>
+                                    <td>96.22%</td>
+                                    <td>93.70%</td>
+                                    <td>927</td>
+                                </tr>
+                                <tr>
+                                    <th>Not Defaulter (ND)</th>
+                                    <td>83.93%</td>
+                                    <td>67.94%</td>
+                                    <td>75.08%</td>
+                                    <td>265</td>
+                                </tr>
+                                <tr>
+                                    <th>Macro Average</th>
+                                    <td>87.62%</td>
+                                    <td>82.08%</td>
+                                    <td>84.39%</td>
+                                    <td>1192</td>
+                                </tr>
+                                <tr>
+                                    <th>Weighted Average</th>
+                                    <td>88.99%</td>
+                                    <td>89.94%</td>
+                                    <td>89.56%</td>
+                                    <td>1192</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
