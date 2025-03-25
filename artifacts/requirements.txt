@@ -1,0 +1,7 @@
+pandas
+scikit-learn
+pytorch-tabnet
+seaborn
+statsmodels
+transformers
+flask
