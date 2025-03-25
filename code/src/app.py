@@ -56,7 +56,8 @@ def predict():
         prediction = model.predict(features_scaled)
         
         # Return the result
-        result = "The customer is likely to default on the loan." if prediction == 1 else "The customer is likely to repay the loan."
+        result = "Defaulter" if prediction == 1 else "Repayer"
+        
         return render_template('index.html', result=result, reason_categories=reason_categories, job_categories=job_categories)
     
     except Exception as e:

@@ -155,10 +155,10 @@
 {% if result %}
 <div class="alert alert-info">
     <h4>Prediction Result:</h4>   
-        {% if result == 1 %}
-            {{result}}
+        {% if result == 'Defaulter' %}
+            <span style="color: red;font-size: larger; font-weight: bold;">The customer is likely to default on the loan.</span>
         {% else %}
-            {{result}}
+        <span style="color: #14b514; font-size: larger; font-weight: bold;">The customer is likely to repay the loan.</span>
         {% endif %}
     </p>
 </div>
@@ -192,30 +192,6 @@
                             <th>Actual(ND)</th>
                             <td style="background-color: hsl(3, 60%, 76%);">85 (FP)</td>
                             <td style="background-color: #90EE90;">180 (TN)</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="container mt-5">            
-                <!-- Table to display confusion matrix -->
-                <table class="table table-bordered table-striped">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th></th>
-                            <th>Predicted(D)</th>
-                            <th>Predicted(ND)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>Actual(D)</th>
-                            <td>892 (TP)</td>
-                            <td>35 (FN)</td>
-                        </tr>
-                        <tr>
-                            <th>Actual(ND)</th>
-                            <td>85 (FP)</td>
-                            <td>180 (TN)</td> 
                         </tr>
                     </tbody>
                 </table>
