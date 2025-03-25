@@ -154,8 +154,13 @@
 <!-- Display Prediction Results (if available) -->
 {% if result %}
 <div class="alert alert-info">
-    <h4>Prediction Result:</h4>
-    <p class="{% if result == 1 %}text-danger{% else %}text-success{% endif %}">{{ result }}</p>
+    <h4>Prediction Result:</h4>   
+        {% if result == 1 %}
+            {{result}}
+        {% else %}
+            {{result}}
+        {% endif %}
+    </p>
 </div>
 {% endif %}
 
