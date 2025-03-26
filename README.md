@@ -110,7 +110,7 @@ Workflow:
 - 🔹 Other: statsmodels.api
 
 ## 👥 Team
-- **Anvesh (Team Captain)** - [GitHub](https://github.com/anvis) | [Linked In](https://www.linkedin.com/in/anveshsalla/)
+- **Anvesh Salla** - [GitHub](https://github.com/anvis) | [Linked In](https://www.linkedin.com/in/anveshsalla/)
 - **Anil Jeripothula** - [GitHub](https://github.com/jakanil999) | [Linked In](https://www.linkedin.com/in/anil-jeripothula-a970b5209/)
 - **Vijay Kokkonda** - [GitHub](https://github.com/vijaykokkonda) | [LinkedIn](https://www.linkedin.com/in/vijay-kokkonada-4140594b/)
 - **Maheswari Pani** - [GitHub](https://github.com/maheswaripani) | [Linked In](https://www.linkedin.com/in/maheswari-pani-358815133/)
