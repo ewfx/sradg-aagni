@@ -100,7 +100,7 @@ Workflow:
 3. Run the project  
    ```sh
    python app.py
-   Open http://127.0.0.1:5000 in any any browser.
+   Open http://127.0.0.1:5000 in any browser.
    ```
 
 ## 🏗️ Tech Stack
