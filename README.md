@@ -21,8 +21,8 @@ history, and job information to make accurate predictions. This
 helps banks minimize risk and ensure better credit decisionmaking.
 
 ## 🎥 Demo
-🔗 [Live Demo](#) (if applicable)  
-📹 [Video Demo](#) (if applicable)  
+🔗 [Live Demo](https://github.com/user-attachments/assets/2f3782a4-94b3-4641-ae87-3c8be5112bbc)   
+📹 [Video Demo](https://github.com/user-attachments/assets/2f3782a4-94b3-4641-ae87-3c8be5112bbc)   
 📹 [Detailed PDF] [Loan Defaulter Prediction - Team Aagni.pdf](https://github.com/user-attachments/files/19464491/Loan.Defaulter.Prediction.-.Team.Aagni.pdf)  
 🖼️ Screenshots:
  - **Loan Prediction Result for Repayer(Not Defaulter) case**
@@ -105,9 +105,8 @@ Workflow:
 
 ## 🏗️ Tech Stack
 - 🔹 Frontend: Flask, Boostrap, HTML
-- 🔹 Backend: Pyhton, sklearn,scipy, statistics
+- 🔹 Backend: Pyhton, sklearn,scipy, statistics, ML/AI
 - 🔹 Database: Sample dataset using csv file.
-- 🔹 Other: statsmodels.api
 
 ## 👥 Team
 - **Anvesh Salla** - [GitHub](https://github.com/anvis) | [Linked In](https://www.linkedin.com/in/anveshsalla/)
